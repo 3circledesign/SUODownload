@@ -55,11 +55,11 @@
   .prog-wrap { margin-bottom: 40px; animation: fadeIn .6s ease .2s both; }
   .prog { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; row-gap: 8px; }
   .prog-step { display: flex; flex-direction: column; align-items: center; z-index: 2; }
-  .dot { width: 34px; height: 34px; border-radius: 50%; border: 2px solid var(--border); background: var(--bg-secondary); display: flex; align-items: center; justify-content: center; font-family: var(--font-mono); font-size: .7rem; font-weight: 600; color: var(--text-dim); transition: all .4s; }
+  .dot { width: 32px; height: 32px; border-radius: 50%; border: 2px solid var(--border); background: var(--bg-secondary); display: flex; align-items: center; justify-content: center; font-family: var(--font-mono); font-size: .65rem; font-weight: 600; color: var(--text-dim); transition: all .4s; }
   .dot.active { border-color: var(--accent); background: var(--accent-dim); color: var(--accent); box-shadow: 0 0 20px var(--accent-dim); }
   .dot.done { border-color: var(--accent-green); background: #00ff8822; color: var(--accent-green); }
-  .dot-label { font-size: .55rem; font-family: var(--font-mono); color: var(--text-dim); margin-top: 5px; letter-spacing: 1px; text-transform: uppercase; white-space: nowrap; }
-  .line { width: 32px; height: 2px; background: var(--border); margin: 0 2px; margin-bottom: 20px; transition: background .4s; }
+  .dot-label { font-size: .48rem; font-family: var(--font-mono); color: var(--text-dim); margin-top: 4px; letter-spacing: 1px; text-transform: uppercase; white-space: nowrap; }
+  .line { width: 24px; height: 2px; background: var(--border); margin: 0 2px; margin-bottom: 18px; transition: background .4s; }
   .line.done { background: var(--accent-green); }
 
   .card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 44px 38px; position: relative; overflow: hidden; animation: slideUp .5s ease; }
@@ -67,28 +67,27 @@
   .tag { font-family: var(--font-mono); font-size: .7rem; color: var(--accent); letter-spacing: 3px; text-transform: uppercase; margin-bottom: 10px; opacity: .8; }
   .ttl { font-family: var(--font-display); font-size: 1.3rem; font-weight: 700; margin-bottom: 22px; letter-spacing: 1px; line-height: 1.4; }
 
-  /* Body content styling — readable */
   .body { font-size: .98rem; }
   .body p { color: var(--text-secondary); margin-bottom: 14px; line-height: 1.8; }
   .body strong { color: var(--text-primary); font-weight: 700; }
   .body a { color: var(--accent); text-decoration: none; border-bottom: 1px dashed var(--accent-dim); transition: all .2s; word-break: break-all; }
   .body a:hover { color: #80f0ff; border-color: #80f0ff; }
-
   .body .hi { background: var(--accent-dim); border-left: 3px solid var(--accent); padding: 16px 20px; border-radius: 0 8px 8px 0; margin: 18px 0; font-family: var(--font-mono); font-size: .8rem; color: var(--accent); line-height: 1.9; }
   .body .warn { background: #ff336612; border-left: 3px solid var(--accent-red); padding: 14px 20px; border-radius: 0 8px 8px 0; margin: 18px 0; color: #ff8899; font-size: .93rem; line-height: 1.7; }
   .body .danger { background: #ff000018; border: 2px solid var(--accent-red); padding: 20px 24px; border-radius: 10px; margin: 20px 0; color: #ff6680; font-size: 1.05rem; text-align: center; font-weight: 700; line-height: 2.2; }
-
+  .body .exc { background: #b388ff15; border: 2px solid #b388ff55; padding: 18px 22px; border-radius: 10px; margin: 20px 0; color: #d4b0ff; font-size: .95rem; line-height: 1.7; }
   .body ul { list-style: none; padding: 0; margin: 14px 0; }
   .body ul li { color: var(--text-secondary); padding: 5px 0 5px 26px; position: relative; font-size: .96rem; line-height: 1.7; }
   .body ul li::before { content: '▸'; position: absolute; left: 6px; color: var(--accent); font-size: .85rem; top: 6px; }
 
-  /* Guide boxes for step-by-step instructions */
   .body .gbox { background: #ffffff05; border: 1px solid var(--border); border-radius: 10px; padding: 20px 22px; margin: 18px 0; }
   .body .gbox .gtitle { font-family: var(--font-display); font-size: .65rem; letter-spacing: 2px; margin-bottom: 12px; text-transform: uppercase; }
   .body .gbox .gtitle.c-red { color: var(--accent-red); }
   .body .gbox .gtitle.c-orange { color: var(--accent-warm); }
   .body .gbox .gtitle.c-green { color: var(--accent-green); }
   .body .gbox .gtitle.c-blue { color: var(--accent); }
+  .body .gbox .gtitle.c-purple { color: #b388ff; }
+  .body .gbox .gtitle.c-yellow { color: #ffd600; }
   .body .gbox p.gdesc { color: var(--text-dim); font-size: .88rem; margin-bottom: 10px; line-height: 1.6; }
   .body .gbox ol { padding-left: 22px; margin: 0; }
   .body .gbox ol li { color: var(--text-secondary); padding: 4px 0; font-size: .93rem; line-height: 1.75; }
@@ -104,7 +103,6 @@
   .btn-s:hover { border-color: var(--accent); color: var(--accent); }
   .btn:disabled { opacity: .3; cursor: not-allowed; transform: none !important; }
 
-  /* Quiz */
   .quiz { display: none; }
   .qh { display: flex; justify-content: space-between; align-items: center; margin-bottom: 28px; padding-bottom: 18px; border-bottom: 1px solid var(--border); }
   .qh-text { font-family: var(--font-mono); font-size: .78rem; color: var(--text-secondary); letter-spacing: 1px; }
@@ -127,7 +125,6 @@
   .qbar { width: 100%; height: 4px; background: var(--border); border-radius: 2px; overflow: hidden; margin-top: 8px; }
   .qbar-fill { height: 100%; background: linear-gradient(90deg, var(--accent), var(--accent-green)); border-radius: 2px; transition: width .5s; width: 0%; }
 
-  /* Results */
   .res { display: none; }
   .res-s { text-align: center; padding: 36px 0; }
   .ring { width: 160px; height: 160px; margin: 0 auto 24px; position: relative; }
@@ -154,7 +151,7 @@
   @media (max-width: 640px) {
     .app { padding: 20px 14px; } .card { padding: 28px 18px; }
     .header .logo { font-size: 1.5rem; letter-spacing: 4px; }
-    .line { width: 16px; } .dot-label { font-size: .45rem; } .dot { width: 26px; height: 26px; font-size: .55rem; }
+    .line { width: 12px; } .dot-label { font-size: .4rem; } .dot { width: 24px; height: 24px; font-size: .5rem; }
     .nav { flex-direction: column; } .nav .btn { width: 100%; text-align: center; }
     .lang { top: 10px; right: 10px; } .lang button { padding: 7px 12px; font-size: .6rem; }
     .body .gbox { padding: 14px 14px; }
@@ -214,7 +211,7 @@
       <div class="res-s">
         <div class="ring">
           <svg viewBox="0 0 160 160"><circle class="rb" cx="80" cy="80" r="70"/><circle class="rf" id="rFill" cx="80" cy="80" r="70"/></svg>
-          <div class="sv"><span id="rScore">0</span><small>/10</small></div>
+          <div class="sv"><span id="rScore">0</span><small id="rTotal"></small></div>
         </div>
         <div class="rmsg" id="rMsg"></div>
         <div class="rdesc" id="rDesc"></div>
@@ -235,7 +232,7 @@
 
 <script>
 const C={
-  pass:8,
+  pass:10,
   dlURL:"https://pixeldrain.com/u/ZogdBh4J",
   ui:{
     en:{
@@ -247,7 +244,7 @@ const C={
       passD:(s,t)=>`You scored ${s}/${t}. The download link is now available.`,
       failD:(s,t,p)=>`You scored ${s}/${t}. You need at least ${p} correct answers.`,
       dlOpen:"DOWNLOAD UNLOCKED",dlLock:"DOWNLOAD LOCKED",dlBtn:"⬇ DOWNLOAD ONENNABE",
-      failMore:p=>`You need at least <strong style="color:var(--accent)">${p} correct answers</strong> to unlock the download. Review the tutorial and try again.`,
+      failMore:p=>`You need at least <strong style="color:var(--accent)">${p} correct answers</strong> to unlock. Review the tutorial and try again.`,
       retry:"↺ RETRY FROM START",sL:i=>`Step ${i}`,qL:"Quiz"
     },
     bm:{
@@ -264,33 +261,33 @@ const C={
     }
   },
 
-  // ===================== TUTORIAL PAGES =====================
+  // ===================== 8 TUTORIAL PAGES =====================
   pages:{
     en:[
       // 1 — Denuvo & AppID
-      {tag:"Step 1 of 6",title:"What is Denuvo & Game Bypass",content:`
-        <p><strong>Denuvo</strong> is an anti-tamper protection used by major game publishers to prevent unauthorized access to their games. Games from <strong>Ubisoft, Rockstar, and the COD series (Activision)</strong> often use Denuvo or similar protection.</p>
-        <p>ONENNABE allows you to <strong>bypass and unlock</strong> these protected games through a Steam-based unlocking system. This includes:</p>
+      {tag:"Step 1 of 8",title:"What is Denuvo & Game Bypass",content:`
+        <p><strong>Denuvo</strong> is an anti-tamper protection used by major game publishers to prevent unauthorized access. Games from <strong>Ubisoft, Rockstar, and the COD series (Activision)</strong> often use Denuvo or similar protection.</p>
+        <p>ONENNABE allows you to <strong>bypass and unlock</strong> these protected games through a Steam-based unlocking system:</p>
         <ul>
           <li><strong>Ubisoft games</strong> — Assassin's Creed, Far Cry, etc.</li>
           <li><strong>Rockstar games</strong> — GTA, Red Dead Redemption, etc.</li>
           <li><strong>COD series</strong> — Call of Duty titles from Activision</li>
           <li><strong>Other Denuvo-protected titles</strong></li>
         </ul>
-        <div class="hi">ℹ Denuvo games require a special process — you will need to wait for "parcel arrival" or borrow an account from your seller. More details in Step 5.</div>
-        <p>Each game on Steam has a unique <strong>Game AppID</strong> — this is the identification number Steam uses to recognize each game. ONENNABE uses these AppIDs to manage your game library and unlock access.</p>
-        <div class="hi">ℹ Example: Counter-Strike 2 = AppID <strong>730</strong>, GTA V = AppID <strong>271590</strong>.<br>You can find any game's AppID in the Steam store page URL.</div>
+        <div class="hi">ℹ Denuvo games require a special process — you will need to <strong>borrow an account</strong> from your seller. More details in Step 6.</div>
+        <p>Each game on Steam has a unique <strong>Game AppID</strong> — this is the identification number Steam uses to recognize each game. ONENNABE uses these AppIDs to manage your game library.</p>
+        <div class="hi">ℹ Example: Counter-Strike 2 = AppID <strong>730</strong>, GTA V = AppID <strong>271590</strong>.<br>Find any game's AppID in the Steam store page URL.</div>
       `},
 
       // 2 — Requirements
-      {tag:"Step 2 of 6",title:"Requirements — READ BEFORE BUYING",content:`
-        <p>Before purchasing ONENNABE, make sure you meet <strong>ALL</strong> of the following requirements. There are <strong>NO REFUNDS</strong> if you buy without meeting these:</p>
+      {tag:"Step 2 of 8",title:"Requirements — READ BEFORE BUYING",content:`
+        <p>Before purchasing ONENNABE, make sure you meet <strong>ALL</strong> requirements. There are <strong>NO REFUNDS</strong> if you buy without meeting these:</p>
         <div class="danger">🚫 NO STEAM = DON'T BUY<br>🚫 NO PC = DON'T BUY<br>🚫 NON-WINDOWS OS = DON'T BUY</div>
         <p>You <strong>MUST</strong> have:</p>
         <ul>
-          <li><strong>A Windows PC</strong> — Desktop or Laptop running Windows 10/11 (64-bit). Mac, Linux, phones, consoles are NOT supported.</li>
-          <li><strong>Steam installed & logged in</strong> — Steam client must be installed and running on your PC.</li>
-          <li><strong>Stable internet connection</strong> — Required for Steam and for activating your CD key.</li>
+          <li><strong>A Windows PC</strong> — Windows 10/11 (64-bit). Mac, Linux, phones, consoles NOT supported.</li>
+          <li><strong>Steam installed & logged in</strong> — Steam client must be installed and running.</li>
+          <li><strong>Stable internet connection</strong></li>
         </ul>
         <div class="gbox">
           <div class="gtitle c-blue">📥 Steam Download & Registration</div>
@@ -300,14 +297,12 @@ const C={
             <li>Install Steam, log in, and <strong>keep it running</strong>.</li>
           </ol>
         </div>
-        <div class="warn">⚠ <strong>IMPORTANT:</strong> If you are using a Mac, Chromebook, phone, PlayStation, Xbox, or Nintendo Switch — this software is NOT for you. Do NOT buy.</div>
-        <p>Not sure if your device is compatible? <strong>Ask your seller FIRST</strong> before purchasing.</p>
+        <div class="warn">⚠ <strong>IMPORTANT:</strong> If using Mac, Chromebook, phone, PlayStation, Xbox, or Nintendo Switch — do NOT buy.</div>
       `},
 
       // 3 — Windows Security Setup
-      {tag:"Step 3 of 6",title:"Windows Security Setup (MUST DO)",content:`
-        <p>Windows will likely block Steam Fix and ONENNABE because they are not from a known publisher. This is <strong>normal</strong> — they are false positives. You MUST configure Windows security <strong>BEFORE</strong> installing.</p>
-
+      {tag:"Step 3 of 8",title:"Windows Security Setup (MUST DO)",content:`
+        <p>Windows will likely block Steam Fix and ONENNABE because they are not from a known publisher. This is <strong>normal</strong> — false positives. Configure Windows security <strong>BEFORE</strong> installing.</p>
         <div class="gbox">
           <div class="gtitle c-red">🛡️ A) Turn Off Smart App Control (Windows 11)</div>
           <p class="gdesc">Smart App Control blocks unrecognized apps. You must turn it <strong>OFF</strong>.</p>
@@ -317,242 +312,369 @@ const C={
             <li>Click <strong>App & Browser Control</strong></li>
             <li>Click <strong>Smart App Control settings</strong></li>
             <li>Select <strong>"Off"</strong></li>
-            <li><strong>Restart your PC</strong> after turning it off</li>
+            <li><strong>Restart your PC</strong></li>
           </ol>
-          <div class="warn" style="margin-top:10px;margin-bottom:0">⚠ Once Smart App Control is turned OFF, it <strong>cannot be turned back on</strong> without resetting Windows. This is a Windows limitation.</div>
+          <div class="warn" style="margin-top:10px;margin-bottom:0">⚠ Once turned OFF, it <strong>cannot be turned back on</strong> without resetting Windows.</div>
         </div>
-
         <div class="gbox">
-          <div class="gtitle c-orange">🪟 B) SmartScreen Popup — "More Info → Run Anyway"</div>
-          <p class="gdesc">When running the installer, Windows may show a blue popup saying <strong>"Windows protected your PC"</strong>. Here's how to get past it:</p>
+          <div class="gtitle c-orange">🪟 B) SmartScreen — "More Info → Run Anyway"</div>
+          <p class="gdesc">Windows may show a blue popup <strong>"Windows protected your PC"</strong>:</p>
           <ol>
-            <li>When you see the blue popup, click the small text <strong>"More info"</strong></li>
-            <li>A new button appears — click <strong>"Run anyway"</strong></li>
-            <li>The installer will start normally</li>
+            <li>Click the small text <strong>"More info"</strong></li>
+            <li>Click <strong>"Run anyway"</strong></li>
+            <li>Installer starts normally</li>
           </ol>
-          <div class="hi" style="margin-top:10px;margin-bottom:0">ℹ This popup appears on both Windows 10 and Windows 11. Don't panic — just click "More info" then "Run anyway".</div>
+          <div class="hi" style="margin-top:10px;margin-bottom:0">ℹ This appears on Windows 10 and 11. Don't panic — "More info" then "Run anyway".</div>
         </div>
-
         <div class="gbox">
           <div class="gtitle c-green">✅ C) Add Antivirus Exclusions (Windows Defender)</div>
-          <p class="gdesc">Add installation folders so Windows doesn't delete the files:</p>
+          <p class="gdesc">Add folders so Windows doesn't delete files:</p>
           <ol>
-            <li>Open <strong>Settings</strong> → <strong>Privacy & Security</strong> → <strong>Windows Security</strong></li>
+            <li><strong>Settings</strong> → <strong>Privacy & Security</strong> → <strong>Windows Security</strong></li>
             <li>Click <strong>Virus & threat protection</strong></li>
-            <li>Scroll down → click <strong>"Manage settings"</strong></li>
-            <li>Scroll to <strong>Exclusions</strong> → click <strong>"Add or remove exclusions"</strong></li>
-            <li>Click <strong>"Add an exclusion"</strong> → choose <strong>"Folder"</strong></li>
-            <li>Add these folders one by one:<br>
+            <li>Click <strong>"Manage settings"</strong></li>
+            <li>Scroll to <strong>Exclusions</strong> → <strong>"Add or remove exclusions"</strong></li>
+            <li><strong>"Add an exclusion"</strong> → <strong>"Folder"</strong></li>
+            <li>Add:<br>
               <span class="path">C:\\Program Files\\Steam</span><br>
               <span class="path">C:\\Program Files (x86)\\Steam</span><br>
               <span class="path">C:\\Program Files\\ONENNABE</span></li>
           </ol>
         </div>
-
-        <div class="hi">ℹ DO ALL 3 BEFORE INSTALLING:<br>A) Turn off Smart App Control (Win 11)<br>B) Know how to click "More info → Run anyway"<br>C) Add folder exclusions in Windows Defender</div>
+        <div class="hi">ℹ DO ALL 3 BEFORE INSTALLING:<br>A) Turn off Smart App Control<br>B) Know "More info → Run anyway"<br>C) Add folder exclusions</div>
       `},
 
       // 4 — Installation Steps
-      {tag:"Step 4 of 6",title:"Installation Steps",content:`
-        <p>Follow these steps <strong>in the correct order</strong>. Doing them out of order will cause problems:</p>
+      {tag:"Step 4 of 8",title:"Installation Steps",content:`
+        <p>Follow these steps <strong>in the correct order</strong>:</p>
         <ul>
-          <li><strong>Step 1:</strong> Install <strong>Steam</strong> and log in to your account</li>
+          <li><strong>Step 1:</strong> Install <strong>Steam</strong> and log in</li>
           <li><strong>Step 2:</strong> Download & install <strong>Steam Fix</strong> — AFTER Steam, BEFORE ONENNABE<br>
             📥 <a href="https://pixeldrain.com/u/KaEt2UMb" target="_blank">Download Steam Fix here</a></li>
-          <li><strong>Step 3:</strong> Download & install <strong>ONENNABE</strong> (unlock after quiz below)</li>
-          <li><strong>Step 4:</strong> Get your <strong>CD Key</strong> from your seller</li>
+          <li><strong>Step 3:</strong> Download & install <strong>ONENNABE</strong> (unlock after quiz)</li>
+          <li><strong>Step 4:</strong> Get <strong>CD Key</strong> from seller</li>
           <li><strong>Step 5:</strong> Launch ONENNABE → enter CD Key → activate</li>
         </ul>
-        <div class="hi">ℹ INSTALLATION ORDER:<br>① Steam → ② Steam Fix → ③ ONENNABE<br><br>Do NOT skip Steam Fix! It is required for the unlock to work.</div>
-        <div class="warn">⚠ If Windows blocks the installer, use <strong>"More info → Run anyway"</strong> (Step 3B). If antivirus deletes it, add exclusions first (Step 3C).</div>
+        <div class="hi">ℹ INSTALLATION ORDER:<br>① Steam → ② Steam Fix → ③ ONENNABE<br><br>Do NOT skip Steam Fix!</div>
+        <div class="warn">⚠ If Windows blocks installer: "More info → Run anyway" (Step 3B). If antivirus deletes: add exclusions first (Step 3C).</div>
       `},
 
-      // 5 — CD Key & Denuvo Games
-      {tag:"Step 5 of 6",title:"CD Key & Playing Denuvo Games",content:`
-        <p>After installation, you need a <strong>CD Key</strong> to activate ONENNABE. Get it from your seller — the person/shop where you purchased the software.</p>
-        <div class="hi">ℹ Your CD Key is unique. Enter it exactly as provided — it is case-sensitive. Do not share your key with anyone.</div>
-        <p><strong>🎮 For Denuvo-protected games</strong> (Ubisoft, Rockstar, COD, etc.):</p>
-        <ul>
-          <li><strong>TikTok buyers:</strong> Your "parcel" must arrive first before you can play Denuvo games. Wait for delivery notification.</li>
-          <li><strong>Borrow an account</strong> from your seller to play Denuvo games. Contact them to arrange.</li>
-          <li><strong>Chat with your seller</strong> through the platform where you bought it — TikTok, Shopee, etc.</li>
-        </ul>
-        <div class="warn">⚠ <strong>Denuvo games:</strong> Do NOT expect to play immediately after installing. You must coordinate with your seller first via TikTok/Shopee chat.</div>
+      // 5 — CD Key Activation
+      {tag:"Step 5 of 8",title:"CD Key Activation",content:`
+        <p>After installation, you need a <strong>CD Key</strong> to activate ONENNABE. Get it from your seller.</p>
+        <div class="gbox">
+          <div class="gtitle c-blue">🔑 How to Activate</div>
+          <ol>
+            <li>Make sure <strong>Steam is running</strong> and logged in</li>
+            <li>Open <strong>ONENNABE</strong></li>
+            <li>Enter your <strong>CD Key</strong> exactly as provided (case-sensitive)</li>
+            <li>Click <strong>Activate</strong></li>
+            <li>Your game library will appear</li>
+          </ol>
+        </div>
+        <div class="hi">ℹ CD Key is unique — enter it exactly. Do not share your key with anyone.</div>
+        <div class="warn">⚠ CD Key not working? Check for typos. Contact seller via TikTok/Shopee chat if it still fails.</div>
       `},
 
-      // 6 — Troubleshooting
-      {tag:"Step 6 of 6",title:"Troubleshooting & FAQ",content:`
-        <p>Solutions to the most common issues:</p>
+      // 6 — DENUVO GAMES (UPDATED)
+      {tag:"Step 6 of 8",title:"How to Play Denuvo Games",content:`
+        <p>Games with <strong>Denuvo protection</strong> (Ubisoft, Rockstar, COD, etc.) need a special process. You must <strong>borrow a seller account</strong> to activate the game.</p>
+        <div class="danger">⚠ DENUVO GAMES REQUIRE SELLER ACCOUNT<br>YOU MUST CLOSE STEAM UNLOCK BEFORE SWITCHING ACCOUNTS</div>
+
+        <div class="gbox">
+          <div class="gtitle c-purple">🎮 Step-by-Step: Playing Denuvo Games</div>
+          <ol>
+            <li><strong>Add the game</strong> from Steam Unlock ONENNABE</li>
+            <li>Click <strong>Enable Auto Update</strong> in Steam Unlock ONENNABE</li>
+            <li><strong>Download the game</strong> in Steam</li>
+            <li><strong>Close</strong> Steam Unlock ONENNABE</li>
+            <li><strong>Switch Steam account</strong> to the <strong>seller's account</strong></li>
+            <li><strong>Play the game</strong> until you reach the <strong>main menu</strong></li>
+            <li><strong>Switch Steam account</strong> back to <strong>your own Steam account</strong></li>
+            <li><strong>Play from your own account</strong> — enjoy!</li>
+          </ol>
+        </div>
+
+        <div class="warn">⚠ <strong>IMPORTANT:</strong> You MUST <strong>close Steam Unlock ONENNABE</strong> before switching to the seller's account. Do NOT leave it open!</div>
+
+        <div class="hi">ℹ DENUVO FLOW:<br>① Add game in ONENNABE → ② Enable Auto Update → ③ Download game<br>④ CLOSE ONENNABE → ⑤ Switch to seller account → ⑥ Play to main menu<br>⑦ Switch back to your account → ⑧ Play from your own account</div>
+
+        <div class="exc">⚠ <strong>EXCEPTION — Resident Evil Requiem:</strong><br>This game must be played from the <strong>seller's account in offline mode</strong>. Do NOT switch back to your own account for this game. Follow your seller's instructions.</div>
+
+        <div class="gbox">
+          <div class="gtitle c-yellow">🛒 TikTok Buyers — Parcel Must Arrive First</div>
+          <p class="gdesc">If bought via TikTok Shop:</p>
+          <ol>
+            <li><strong>"Parcel" must arrive first</strong> — confirms your purchase</li>
+            <li>Wait for <strong>delivery notification</strong> from TikTok</li>
+            <li><strong>Only after parcel arrives</strong>, contact seller for the borrowed account</li>
+          </ol>
+        </div>
+      `},
+
+      // 7 — HOW TO USE BYPASS (UPDATED)
+      {tag:"Step 7 of 8",title:"How to Use Bypass / Online Patch",content:`
+        <p>Once a game is installed, you can apply the <strong>Bypass</strong> or <strong>Online Patch</strong> to play it. The game must have the tag <strong>"Bypass Available"</strong> or <strong>"Online Supported"</strong> in Steam Unlock.</p>
+
+        <div class="gbox">
+          <div class="gtitle c-green">🚀 Step-by-Step: Applying Bypass</div>
+          <ol>
+            <li>The <strong>game must be installed first</strong> on your PC</li>
+            <li>Make sure the game has the tag <strong>"Bypass Available"</strong> or <strong>"Online Supported"</strong> in Steam Unlock</li>
+            <li>Open Steam Unlock ONENNABE and <strong>click on the game</strong> again</li>
+            <li>Click the <strong>"Online Patch / Bypass"</strong> button</li>
+            <li><strong>Wait for the download to complete</strong> — do not close it</li>
+            <li>Follow the <strong>guide in Discord</strong> on how to play the game after bypass/online patch</li>
+            <li><strong>Turn off antivirus</strong> — this is important! The bypass files will be flagged as false positives</li>
+          </ol>
+        </div>
+
+        <div class="danger">⚠ TURN OFF ANTIVIRUS BEFORE APPLYING BYPASS<br>BYPASS FILES WILL BE DELETED IF ANTIVIRUS IS ON</div>
+
+        <div class="hi">ℹ BYPASS CHECKLIST:<br>✓ Game is installed<br>✓ Game has "Bypass Available" or "Online Supported" tag<br>✓ Antivirus is OFF or exclusions are added<br>✓ Click "Online Patch / Bypass" in ONENNABE<br>✓ Wait for download to complete<br>✓ Follow Discord guide to play</div>
+
+        <div class="warn">⚠ <strong>If bypass files keep getting deleted:</strong> Your antivirus is removing them. Turn off antivirus completely or add the game folder to your exclusion list (see Step 3C).</div>
+      `},
+
+      // 8 — Troubleshooting
+      {tag:"Step 8 of 8",title:"Troubleshooting & FAQ",content:`
+        <p>Solutions to common issues:</p>
         <ul>
-          <li><strong>"Game turned back to Purchase/Buy":</strong> Download <strong>Steam Fix</strong> again, reinstall, and <strong>restart your PC</strong>.</li>
-          <li><strong>"Windows protected your PC" popup:</strong> Click <strong>"More info"</strong> → <strong>"Run anyway"</strong>.</li>
-          <li><strong>"Antivirus deleted the file":</strong> Add exclusion folders first (see Step 3C), then re-download.</li>
-          <li><strong>"CD Key not working":</strong> Check for typos — keys are case-sensitive. Contact your seller.</li>
-          <li><strong>"Can't play Denuvo game":</strong> Parcel must arrive (TikTok buyers) or borrow account from seller.</li>
-          <li><strong>"Application won't start":</strong> Run as Administrator. Make sure Steam is running.</li>
+          <li><strong>"Game turned back to Purchase/Buy":</strong> Download <strong>Steam Fix</strong> again, reinstall, and <strong>restart PC</strong>.</li>
+          <li><strong>"Windows protected your PC":</strong> Click <strong>"More info"</strong> → <strong>"Run anyway"</strong>.</li>
+          <li><strong>"Antivirus deleted the file":</strong> Turn off antivirus or add exclusion folders (Step 3C).</li>
+          <li><strong>"CD Key not working":</strong> Check for typos. Contact your seller.</li>
+          <li><strong>"Denuvo game not working":</strong> Did you close ONENNABE before switching to seller account? Follow Step 6 exactly.</li>
+          <li><strong>"Bypass files keep disappearing":</strong> Turn off antivirus before applying bypass. Add game folder to exclusions.</li>
+          <li><strong>"Online Patch / Bypass button not showing":</strong> Game must have "Bypass Available" or "Online Supported" tag. Not all games support bypass.</li>
+          <li><strong>"App won't start":</strong> Run as Administrator. Make sure Steam is running.</li>
         </ul>
         <div class="hi">ℹ GAME TURNED BACK TO "PURCHASE"?<br>→ Download Steam Fix again<br>→ Install Steam Fix<br>→ Restart your PC<br>→ Problem solved!</div>
-        <p>For other issues, <strong>contact your seller</strong> via TikTok, Shopee, or join the Discord support server.</p>
-        <p>You've completed the tutorial! Click <strong>Next</strong> to start the quiz. You need <strong>8/10 correct</strong> to unlock the download. <strong>Good luck!</strong></p>
+        <p>For other issues, <strong>contact your seller</strong> or join the <strong>Discord support server</strong> for game-specific guides.</p>
+        <p>Tutorial complete! Click <strong>Next</strong> to start the quiz. You need <strong>10/12 correct</strong> to unlock download. <strong>Good luck!</strong></p>
       `}
     ],
 
     bm:[
       // 1 BM
-      {tag:"Langkah 1 daripada 6",title:"Apa itu Denuvo & Game Bypass",content:`
-        <p><strong>Denuvo</strong> ialah perlindungan anti-tamper yang digunakan oleh penerbit permainan utama untuk menghalang akses tanpa kebenaran. Permainan dari <strong>Ubisoft, Rockstar, dan siri COD (Activision)</strong> sering menggunakan Denuvo.</p>
-        <p>ONENNABE membolehkan anda <strong>bypass dan membuka kunci</strong> permainan yang dilindungi ini melalui sistem berasaskan Steam:</p>
+      {tag:"Langkah 1 daripada 8",title:"Apa itu Denuvo & Game Bypass",content:`
+        <p><strong>Denuvo</strong> ialah perlindungan anti-tamper oleh penerbit permainan utama. Permainan dari <strong>Ubisoft, Rockstar, dan siri COD (Activision)</strong> sering guna Denuvo.</p>
+        <p>ONENNABE membolehkan anda <strong>bypass dan buka kunci</strong> permainan ini melalui sistem Steam:</p>
         <ul>
           <li><strong>Permainan Ubisoft</strong> — Assassin's Creed, Far Cry, dll.</li>
           <li><strong>Permainan Rockstar</strong> — GTA, Red Dead Redemption, dll.</li>
           <li><strong>Siri COD</strong> — Call of Duty dari Activision</li>
           <li><strong>Tajuk lain yang dilindungi Denuvo</strong></li>
         </ul>
-        <div class="hi">ℹ Permainan Denuvo perlukan proses khas — anda perlu tunggu "parcel sampai" atau pinjam akaun dari seller. Butiran di Langkah 5.</div>
-        <p>Setiap permainan Steam ada <strong>Game AppID</strong> unik — nombor pengenalan yang Steam guna untuk kenal pasti setiap permainan.</p>
-        <div class="hi">ℹ Contoh: Counter-Strike 2 = AppID <strong>730</strong>, GTA V = AppID <strong>271590</strong>.<br>Boleh cari AppID di URL halaman Steam Store.</div>
+        <div class="hi">ℹ Permainan Denuvo perlu proses khas — anda perlu <strong>pinjam akaun</strong> dari seller. Butiran di Langkah 6.</div>
+        <p>Setiap permainan Steam ada <strong>Game AppID</strong> unik — nombor pengenalan untuk setiap permainan.</p>
+        <div class="hi">ℹ Contoh: Counter-Strike 2 = AppID <strong>730</strong>, GTA V = AppID <strong>271590</strong>.</div>
       `},
 
       // 2 BM
-      {tag:"Langkah 2 daripada 6",title:"Keperluan — BACA SEBELUM BELI",content:`
-        <p>Sebelum membeli ONENNABE, pastikan anda memenuhi <strong>SEMUA</strong> keperluan berikut. <strong>TIADA REFUND</strong> jika anda beli tanpa memenuhi keperluan ini:</p>
+      {tag:"Langkah 2 daripada 8",title:"Keperluan — BACA SEBELUM BELI",content:`
+        <p>Pastikan anda memenuhi <strong>SEMUA</strong> keperluan. <strong>TIADA REFUND</strong>:</p>
         <div class="danger">🚫 TAKDE STEAM = JANGAN BELI<br>🚫 TAKDE PC = JANGAN BELI<br>🚫 BUKAN WINDOWS OS = JANGAN BELI</div>
-        <p>Anda <strong>MESTI</strong> ada:</p>
         <ul>
-          <li><strong>PC Windows</strong> — Desktop atau Laptop Windows 10/11 (64-bit). Mac, Linux, telefon, konsol TIDAK disokong.</li>
-          <li><strong>Steam dipasang & dilog masuk</strong> — Steam client mesti dipasang dan berjalan di PC.</li>
-          <li><strong>Internet stabil</strong> — Untuk Steam dan aktifkan CD key.</li>
+          <li><strong>PC Windows</strong> — Windows 10/11 (64-bit). Mac, Linux, telefon, konsol TIDAK disokong.</li>
+          <li><strong>Steam dipasang & dilog masuk</strong></li>
+          <li><strong>Internet stabil</strong></li>
         </ul>
         <div class="gbox">
           <div class="gtitle c-blue">📥 Muat Turun & Daftar Steam</div>
           <ol>
             <li><strong>Muat turun Steam:</strong> <a href="https://cdn.fastly.steamstatic.com/client/installer/SteamSetup.exe" target="_blank">https://cdn.fastly.steamstatic.com/client/installer/SteamSetup.exe</a></li>
             <li><strong>Daftar akaun:</strong> <a href="https://store.steampowered.com/join/" target="_blank">https://store.steampowered.com/join/</a></li>
-            <li>Pasang Steam, log masuk, dan <strong>biarkan ia berjalan</strong>.</li>
+            <li>Pasang Steam, log masuk, <strong>biarkan berjalan</strong>.</li>
           </ol>
         </div>
-        <div class="warn">⚠ <strong>PENTING:</strong> Jika guna Mac, Chromebook, telefon, PlayStation, Xbox, Nintendo Switch — software ini BUKAN untuk anda. JANGAN BELI.</div>
-        <p>Tak pasti peranti serasi? <strong>Tanya seller DULU</strong> sebelum beli.</p>
+        <div class="warn">⚠ Jika guna Mac, Chromebook, telefon, PlayStation, Xbox, Nintendo Switch — JANGAN BELI.</div>
       `},
 
-      // 3 BM — Windows Security
-      {tag:"Langkah 3 daripada 6",title:"Tetapan Keselamatan Windows (WAJIB BUAT)",content:`
-        <p>Windows kemungkinan besar akan menyekat Steam Fix dan ONENNABE kerana ia bukan dari penerbit yang dikenali. Ini <strong>normal</strong> — ia adalah false positive (pengesanan palsu). Anda WAJIB tetapkan keselamatan Windows <strong>SEBELUM</strong> install.</p>
-
+      // 3 BM
+      {tag:"Langkah 3 daripada 8",title:"Tetapan Keselamatan Windows (WAJIB)",content:`
+        <p>Windows akan menyekat Steam Fix dan ONENNABE. Ini <strong>normal</strong> — false positive. Tetapkan keselamatan <strong>SEBELUM</strong> install.</p>
         <div class="gbox">
           <div class="gtitle c-red">🛡️ A) Matikan Smart App Control (Windows 11)</div>
-          <p class="gdesc">Smart App Control menyekat aplikasi yang tidak dikenali. Anda mesti <strong>MATIKAN</strong> ia.</p>
           <ol>
-            <li>Buka <strong>Settings</strong> → tekan <strong>Win + I</strong></li>
-            <li>Pergi ke <strong>Privacy & Security</strong> → <strong>Windows Security</strong></li>
+            <li>Buka <strong>Settings</strong> → <strong>Win + I</strong></li>
+            <li><strong>Privacy & Security</strong> → <strong>Windows Security</strong></li>
             <li>Klik <strong>App & Browser Control</strong></li>
             <li>Klik <strong>Smart App Control settings</strong></li>
             <li>Pilih <strong>"Off"</strong></li>
-            <li><strong>Restart PC</strong> selepas matikan</li>
+            <li><strong>Restart PC</strong></li>
           </ol>
-          <div class="warn" style="margin-top:10px;margin-bottom:0">⚠ Setelah Smart App Control dimatikan, ia <strong>tidak boleh dihidupkan semula</strong> tanpa reset Windows. Ini limitasi Windows.</div>
+          <div class="warn" style="margin-top:10px;margin-bottom:0">⚠ Setelah dimatikan, <strong>tidak boleh dihidupkan semula</strong> tanpa reset Windows.</div>
         </div>
-
         <div class="gbox">
-          <div class="gtitle c-orange">🪟 B) Popup SmartScreen — "More Info → Run Anyway"</div>
-          <p class="gdesc">Bila run installer, Windows mungkin tunjuk popup biru <strong>"Windows protected your PC"</strong>. Cara bypass:</p>
+          <div class="gtitle c-orange">🪟 B) SmartScreen — "More Info → Run Anyway"</div>
           <ol>
-            <li>Bila nampak popup biru, klik teks kecil <strong>"More info"</strong></li>
-            <li>Butang baru muncul — klik <strong>"Run anyway"</strong></li>
-            <li>Installer akan mula seperti biasa</li>
+            <li>Klik teks kecil <strong>"More info"</strong></li>
+            <li>Klik <strong>"Run anyway"</strong></li>
+            <li>Installer mula seperti biasa</li>
           </ol>
-          <div class="hi" style="margin-top:10px;margin-bottom:0">ℹ Popup ini keluar pada Windows 10 dan Windows 11. Jangan panik — klik "More info" kemudian "Run anyway".</div>
         </div>
-
         <div class="gbox">
-          <div class="gtitle c-green">✅ C) Tambah Pengecualian Antivirus (Windows Defender)</div>
-          <p class="gdesc">Tambah folder supaya Windows tidak padam fail:</p>
+          <div class="gtitle c-green">✅ C) Tambah Pengecualian Antivirus</div>
           <ol>
-            <li>Buka <strong>Settings</strong> → <strong>Privacy & Security</strong> → <strong>Windows Security</strong></li>
+            <li><strong>Settings</strong> → <strong>Privacy & Security</strong> → <strong>Windows Security</strong></li>
             <li>Klik <strong>Virus & threat protection</strong></li>
-            <li>Scroll bawah → klik <strong>"Manage settings"</strong></li>
-            <li>Scroll ke <strong>Exclusions</strong> → klik <strong>"Add or remove exclusions"</strong></li>
-            <li>Klik <strong>"Add an exclusion"</strong> → pilih <strong>"Folder"</strong></li>
-            <li>Tambah folder ini satu per satu:<br>
+            <li>Klik <strong>"Manage settings"</strong></li>
+            <li><strong>Exclusions</strong> → <strong>"Add or remove exclusions"</strong></li>
+            <li><strong>"Add an exclusion"</strong> → <strong>"Folder"</strong></li>
+            <li>Tambah:<br>
               <span class="path">C:\\Program Files\\Steam</span><br>
               <span class="path">C:\\Program Files (x86)\\Steam</span><br>
               <span class="path">C:\\Program Files\\ONENNABE</span></li>
           </ol>
         </div>
-
-        <div class="hi">ℹ BUAT KETIGA-TIGA SEBELUM INSTALL:<br>A) Matikan Smart App Control (Win 11)<br>B) Tahu cara klik "More info → Run anyway"<br>C) Tambah folder pengecualian dalam Windows Defender</div>
+        <div class="hi">ℹ BUAT KETIGA-TIGA SEBELUM INSTALL!</div>
       `},
 
-      // 4 BM — Installation
-      {tag:"Langkah 4 daripada 6",title:"Langkah Pemasangan",content:`
-        <p>Ikuti langkah ini <strong>mengikut susunan yang betul</strong>. Jika tak ikut susunan, akan ada masalah:</p>
+      // 4 BM
+      {tag:"Langkah 4 daripada 8",title:"Langkah Pemasangan",content:`
+        <p>Ikuti <strong>mengikut susunan betul</strong>:</p>
         <ul>
-          <li><strong>Langkah 1:</strong> Pasang <strong>Steam</strong> dan log masuk ke akaun anda</li>
-          <li><strong>Langkah 2:</strong> Muat turun & pasang <strong>Steam Fix</strong> — SELEPAS Steam, SEBELUM ONENNABE<br>
+          <li><strong>Langkah 1:</strong> Pasang <strong>Steam</strong> dan log masuk</li>
+          <li><strong>Langkah 2:</strong> Muat turun & pasang <strong>Steam Fix</strong><br>
             📥 <a href="https://pixeldrain.com/u/KaEt2UMb" target="_blank">Muat turun Steam Fix di sini</a></li>
-          <li><strong>Langkah 3:</strong> Muat turun & pasang <strong>ONENNABE</strong> (buka kunci selepas lulus kuiz)</li>
-          <li><strong>Langkah 4:</strong> Dapatkan <strong>CD Key</strong> daripada seller dan aktifkan</li>
+          <li><strong>Langkah 3:</strong> Muat turun & pasang <strong>ONENNABE</strong></li>
+          <li><strong>Langkah 4:</strong> Dapatkan <strong>CD Key</strong> dari seller</li>
+          <li><strong>Langkah 5:</strong> Buka ONENNABE → masuk CD Key → aktifkan</li>
         </ul>
-        <div class="hi">ℹ SUSUNAN PEMASANGAN:<br>① Steam → ② Steam Fix → ③ ONENNABE<br><br>JANGAN skip Steam Fix! Ia diperlukan untuk unlock berfungsi.</div>
-        <div class="warn">⚠ Jika Windows menyekat installer, guna <strong>"More info → Run anyway"</strong> (Langkah 3B). Jika antivirus padam fail, tambah pengecualian dulu (Langkah 3C).</div>
+        <div class="hi">ℹ SUSUNAN: ① Steam → ② Steam Fix → ③ ONENNABE</div>
+        <div class="warn">⚠ Windows menyekat? Guna "More info → Run anyway". Antivirus padam? Tambah pengecualian dulu.</div>
       `},
 
-      // 5 BM — CD Key & Denuvo
-      {tag:"Langkah 5 daripada 6",title:"CD Key & Permainan Denuvo",content:`
-        <p>Selepas install, anda perlu <strong>CD Key</strong> untuk aktifkan ONENNABE. Dapatkan dari seller — orang/kedai di mana anda beli software.</p>
-        <div class="hi">ℹ CD Key unik untuk anda. Masukkan tepat — sensitif huruf besar/kecil. Jangan kongsi key dengan sesiapa.</div>
-        <p><strong>🎮 Untuk permainan Denuvo</strong> (Ubisoft, Rockstar, COD, dll.):</p>
-        <ul>
-          <li><strong>Pembeli TikTok:</strong> "Parcel" mesti sampai dulu sebelum boleh main permainan Denuvo.</li>
-          <li><strong>Pinjam akaun</strong> daripada seller untuk main permainan Denuvo.</li>
-          <li><strong>Chat dengan seller</strong> melalui TikTok, Shopee, atau platform mana anda beli.</li>
-        </ul>
-        <div class="warn">⚠ <strong>Permainan Denuvo:</strong> JANGAN harap main terus selepas install. Koordinasi dengan seller dulu via TikTok/Shopee chat.</div>
+      // 5 BM
+      {tag:"Langkah 5 daripada 8",title:"Pengaktifan CD Key",content:`
+        <p>Selepas install, perlu <strong>CD Key</strong> untuk aktifkan. Dapatkan dari seller.</p>
+        <div class="gbox">
+          <div class="gtitle c-blue">🔑 Cara Aktifkan</div>
+          <ol>
+            <li>Pastikan <strong>Steam berjalan</strong> dan dilog masuk</li>
+            <li>Buka <strong>ONENNABE</strong></li>
+            <li>Masukkan <strong>CD Key</strong> dengan tepat (sensitif huruf)</li>
+            <li>Klik <strong>Activate</strong></li>
+            <li>Pustaka permainan akan muncul</li>
+          </ol>
+        </div>
+        <div class="hi">ℹ CD Key unik — masukkan tepat. Jangan kongsi.</div>
+        <div class="warn">⚠ Tak berfungsi? Semak kesilapan taip. Hubungi seller via TikTok/Shopee.</div>
       `},
 
-      // 6 BM — Troubleshooting
-      {tag:"Langkah 6 daripada 6",title:"Penyelesaian Masalah & FAQ",content:`
-        <p>Penyelesaian untuk masalah paling biasa:</p>
+      // 6 BM — DENUVO (UPDATED)
+      {tag:"Langkah 6 daripada 8",title:"Cara Main Permainan Denuvo",content:`
+        <p>Permainan dengan <strong>perlindungan Denuvo</strong> (Ubisoft, Rockstar, COD, dll.) perlu proses khas. Anda mesti <strong>pinjam akaun seller</strong> untuk aktifkan permainan.</p>
+        <div class="danger">⚠ PERMAINAN DENUVO PERLUKAN AKAUN SELLER<br>WAJIB TUTUP STEAM UNLOCK SEBELUM TUKAR AKAUN</div>
+
+        <div class="gbox">
+          <div class="gtitle c-purple">🎮 Langkah Demi Langkah: Main Permainan Denuvo</div>
+          <ol>
+            <li><strong>Tambah permainan</strong> dari Steam Unlock ONENNABE</li>
+            <li>Klik <strong>Enable Auto Update</strong> dalam Steam Unlock ONENNABE</li>
+            <li><strong>Download permainan</strong> di Steam</li>
+            <li><strong>Tutup</strong> Steam Unlock ONENNABE</li>
+            <li><strong>Tukar akaun Steam</strong> ke <strong>akaun seller</strong></li>
+            <li><strong>Main permainan</strong> sehingga sampai <strong>main menu</strong></li>
+            <li><strong>Tukar akaun Steam</strong> balik ke <strong>akaun Steam sendiri</strong></li>
+            <li><strong>Main dari akaun sendiri</strong> — selamat bermain!</li>
+          </ol>
+        </div>
+
+        <div class="warn">⚠ <strong>PENTING:</strong> Anda WAJIB <strong>tutup Steam Unlock ONENNABE</strong> sebelum tukar ke akaun seller. JANGAN biarkan ia terbuka!</div>
+
+        <div class="hi">ℹ ALIRAN DENUVO:<br>① Tambah game di ONENNABE → ② Enable Auto Update → ③ Download game<br>④ TUTUP ONENNABE → ⑤ Tukar ke akaun seller → ⑥ Main sampai main menu<br>⑦ Tukar balik ke akaun sendiri → ⑧ Main dari akaun sendiri</div>
+
+        <div class="exc">⚠ <strong>PENGECUALIAN — Resident Evil Requiem:</strong><br>Permainan ini mesti dimain dari <strong>akaun seller dalam mod offline</strong>. JANGAN tukar balik ke akaun sendiri untuk permainan ini. Ikut arahan seller.</div>
+
+        <div class="gbox">
+          <div class="gtitle c-yellow">🛒 Pembeli TikTok — Parcel Mesti Sampai Dulu</div>
+          <ol>
+            <li><strong>"Parcel" mesti sampai dulu</strong></li>
+            <li>Tunggu <strong>notifikasi penghantaran</strong> dari TikTok</li>
+            <li><strong>Selepas parcel sampai</strong>, hubungi seller untuk akaun pinjaman</li>
+          </ol>
+        </div>
+      `},
+
+      // 7 BM — BYPASS (UPDATED)
+      {tag:"Langkah 7 daripada 8",title:"Cara Guna Bypass / Online Patch",content:`
+        <p>Selepas permainan dipasang, anda boleh apply <strong>Bypass</strong> atau <strong>Online Patch</strong>. Permainan mesti ada tag <strong>"Bypass Available"</strong> atau <strong>"Online Supported"</strong> dalam Steam Unlock.</p>
+
+        <div class="gbox">
+          <div class="gtitle c-green">🚀 Langkah Demi Langkah: Apply Bypass</div>
+          <ol>
+            <li><strong>Permainan mesti dipasang dulu</strong> di PC anda</li>
+            <li>Pastikan permainan ada tag <strong>"Bypass Available"</strong> atau <strong>"Online Supported"</strong> dalam Steam Unlock</li>
+            <li>Buka Steam Unlock ONENNABE dan <strong>klik pada permainan</strong> sekali lagi</li>
+            <li>Klik butang <strong>"Online Patch / Bypass"</strong></li>
+            <li><strong>Tunggu muat turun selesai</strong> — jangan tutup</li>
+            <li>Ikut <strong>panduan di Discord</strong> cara main permainan selepas bypass/online patch</li>
+            <li><strong>Matikan antivirus</strong> — ini penting! Fail bypass akan dikesan sebagai false positive</li>
+          </ol>
+        </div>
+
+        <div class="danger">⚠ MATIKAN ANTIVIRUS SEBELUM APPLY BYPASS<br>FAIL BYPASS AKAN DIPADAM JIKA ANTIVIRUS AKTIF</div>
+
+        <div class="hi">ℹ SENARAI SEMAK BYPASS:<br>✓ Permainan sudah dipasang<br>✓ Permainan ada tag "Bypass Available" atau "Online Supported"<br>✓ Antivirus MATI atau pengecualian ditambah<br>✓ Klik "Online Patch / Bypass" dalam ONENNABE<br>✓ Tunggu muat turun selesai<br>✓ Ikut panduan Discord untuk main</div>
+
+        <div class="warn">⚠ <strong>Fail bypass terus dipadam?</strong> Antivirus anda sedang membuangnya. Matikan antivirus sepenuhnya atau tambah folder permainan ke senarai pengecualian (Langkah 3C).</div>
+      `},
+
+      // 8 BM
+      {tag:"Langkah 8 daripada 8",title:"Penyelesaian Masalah & FAQ",content:`
+        <p>Penyelesaian masalah biasa:</p>
         <ul>
-          <li><strong>"Game bertukar balik ke Purchase/Buy":</strong> Muat turun <strong>Steam Fix</strong> semula, pasang, dan <strong>restart PC</strong>.</li>
-          <li><strong>"Windows protected your PC" popup:</strong> Klik <strong>"More info"</strong> → <strong>"Run anyway"</strong>.</li>
-          <li><strong>"Antivirus padam fail":</strong> Tambah folder pengecualian dulu (Langkah 3C), kemudian muat turun semula.</li>
-          <li><strong>"CD Key tak berfungsi":</strong> Semak kesilapan taip — sensitif huruf besar/kecil. Hubungi seller.</li>
-          <li><strong>"Tak boleh main permainan Denuvo":</strong> Pastikan parcel sampai (pembeli TikTok) atau pinjam akaun dari seller.</li>
-          <li><strong>"Aplikasi tak boleh start":</strong> Run as Administrator. Pastikan Steam berjalan.</li>
+          <li><strong>"Game bertukar ke Purchase/Buy":</strong> Muat turun <strong>Steam Fix</strong> semula, pasang, <strong>restart PC</strong>.</li>
+          <li><strong>"Windows protected your PC":</strong> Klik <strong>"More info"</strong> → <strong>"Run anyway"</strong>.</li>
+          <li><strong>"Antivirus padam fail":</strong> Matikan antivirus atau tambah pengecualian (Langkah 3C).</li>
+          <li><strong>"CD Key tak berfungsi":</strong> Semak kesilapan taip. Hubungi seller.</li>
+          <li><strong>"Permainan Denuvo tak jalan":</strong> Sudah tutup ONENNABE sebelum tukar ke akaun seller? Ikut Langkah 6 dengan tepat.</li>
+          <li><strong>"Fail bypass hilang":</strong> Matikan antivirus sebelum apply bypass. Tambah folder permainan ke pengecualian.</li>
+          <li><strong>"Butang Online Patch tak muncul":</strong> Permainan mesti ada tag "Bypass Available" atau "Online Supported".</li>
+          <li><strong>"Aplikasi tak start":</strong> Run as Administrator. Pastikan Steam berjalan.</li>
         </ul>
-        <div class="hi">ℹ GAME BERTUKAR BALIK KE "PURCHASE"?<br>→ Muat turun Steam Fix semula<br>→ Pasang Steam Fix<br>→ Restart PC<br>→ Masalah selesai!</div>
-        <p>Untuk masalah lain, <strong>hubungi seller</strong> melalui TikTok, Shopee, atau sertai pelayan Discord sokongan.</p>
-        <p>Anda telah melengkapkan tutorial! Klik <strong>Seterusnya</strong> untuk mula kuiz. Perlu <strong>8/10 betul</strong> untuk buka muat turun. <strong>Semoga berjaya!</strong></p>
+        <div class="hi">ℹ GAME BERTUKAR KE "PURCHASE"?<br>→ Muat turun Steam Fix semula<br>→ Pasang Steam Fix<br>→ Restart PC<br>→ Selesai!</div>
+        <p><strong>Hubungi seller</strong> atau sertai <strong>Discord</strong> untuk panduan khusus permainan.</p>
+        <p>Tutorial selesai! Klik <strong>Seterusnya</strong> untuk kuiz. Perlu <strong>10/12 betul</strong>. <strong>Semoga berjaya!</strong></p>
       `}
     ]
   },
 
-  // ===================== QUIZ =====================
+  // ===================== 12 QUIZ QUESTIONS =====================
   questions:{
     en:[
       {q:"What is Denuvo?",o:["A type of game engine","Anti-tamper protection used by game publishers","A Steam plugin","A game genre"],a:1},
       {q:"Which is NOT a requirement to use ONENNABE?",o:["Windows PC","Steam installed and logged in","PlayStation or Xbox console","Stable internet connection"],a:2},
       {q:"What is the correct installation order?",o:["ONENNABE → Steam → Steam Fix","Steam Fix → ONENNABE → Steam","Steam → Steam Fix → ONENNABE","Steam → ONENNABE → Steam Fix"],a:2},
-      {q:"What is a Game AppID?",o:["Your Steam password","A unique ID number for each game on Steam","A type of CD Key","Your seller's contact number"],a:1},
       {q:"What should you do if a game turns back to 'Purchase/Buy'?",o:["Buy the game again","Uninstall Steam completely","Download Steam Fix, install it, and restart PC","Create a new Steam account"],a:2},
       {q:"When Windows shows 'Windows protected your PC', what do you click?",o:["Click 'Delete' and re-download","Click 'More info' then 'Run anyway'","Turn off your PC","Uninstall Windows Defender"],a:1},
-      {q:"Where do you get your CD Key from?",o:["Steam Store","ONENNABE website","Your seller (TikTok, Shopee, etc.)","Microsoft Store"],a:2},
       {q:"What must you do in Windows Defender BEFORE installing?",o:["Uninstall it completely","Add folder exclusions for Steam and ONENNABE","Change your password","Update to the latest version"],a:1},
-      {q:"If you DON'T have Steam or a Windows PC, what should you do?",o:["Buy ONENNABE anyway","Use it on your phone","DO NOT buy — won't work without Steam and Windows PC","Install Steam on your console"],a:2},
-      {q:"What do you need to play Denuvo games (Ubisoft, Rockstar, COD)?",o:["Just install and play immediately","Wait for parcel / borrow account from seller","Install a VPN","Buy the game on Steam"],a:1}
+      {q:"Where do you get your CD Key from?",o:["Steam Store","ONENNABE website","Your seller (TikTok, Shopee, etc.)","Microsoft Store"],a:2},
+      // Denuvo quiz
+      {q:"What must you do BEFORE switching to the seller's account for Denuvo games?",o:["Uninstall Steam Fix","Close Steam Unlock ONENNABE","Delete your CD Key","Restart your PC"],a:1},
+      {q:"After playing a Denuvo game to the main menu on seller's account, what do you do next?",o:["Keep playing on seller account forever","Switch back to your own Steam account and play","Uninstall the game","Contact Steam support"],a:1},
+      {q:"Which game is the EXCEPTION that must be played from seller account in offline mode?",o:["GTA V","Assassin's Creed","Resident Evil Requiem","Call of Duty"],a:2},
+      // Bypass quiz
+      {q:"What tag must a game have before you can apply bypass?",o:["Free to Play","Bypass Available or Online Supported","Early Access","Coming Soon"],a:1},
+      {q:"What is CRITICAL to do before applying the Online Patch / Bypass?",o:["Update Windows","Turn off antivirus","Uninstall Steam","Change your Steam name"],a:1}
     ],
     bm:[
       {q:"Apa itu Denuvo?",o:["Sejenis game engine","Perlindungan anti-tamper oleh penerbit permainan","Plugin Steam","Genre permainan"],a:1},
       {q:"Yang mana BUKAN keperluan untuk guna ONENNABE?",o:["PC Windows","Steam dipasang dan dilog masuk","Konsol PlayStation atau Xbox","Internet stabil"],a:2},
       {q:"Apakah susunan pemasangan yang betul?",o:["ONENNABE → Steam → Steam Fix","Steam Fix → ONENNABE → Steam","Steam → Steam Fix → ONENNABE","Steam → ONENNABE → Steam Fix"],a:2},
-      {q:"Apa itu Game AppID?",o:["Kata laluan Steam","Nombor pengenalan unik untuk setiap permainan di Steam","Sejenis CD Key","Nombor telefon seller"],a:1},
-      {q:"Apa buat jika game bertukar balik ke 'Purchase/Buy'?",o:["Beli game semula","Nyahpasang Steam","Muat turun Steam Fix, pasang, dan restart PC","Buat akaun Steam baru"],a:2},
+      {q:"Apa buat jika game bertukar ke 'Purchase/Buy'?",o:["Beli game semula","Nyahpasang Steam","Muat turun Steam Fix, pasang, dan restart PC","Buat akaun Steam baru"],a:2},
       {q:"Bila Windows tunjuk 'Windows protected your PC', apa perlu klik?",o:["Klik 'Delete' dan muat turun semula","Klik 'More info' kemudian 'Run anyway'","Tutup PC terus","Nyahpasang Windows Defender"],a:1},
-      {q:"Dari mana anda dapat CD Key?",o:["Steam Store","Laman web ONENNABE","Seller anda (TikTok, Shopee, dll.)","Microsoft Store"],a:2},
       {q:"Apa perlu buat dalam Windows Defender SEBELUM install?",o:["Nyahpasang sepenuhnya","Tambah pengecualian folder untuk Steam dan ONENNABE","Tukar kata laluan","Kemas kini ke versi terbaru"],a:1},
-      {q:"Jika TAKDE Steam atau PC Windows, apa patut buat?",o:["Beli ONENNABE je","Guna di telefon","JANGAN BELI — tak berfungsi tanpa Steam dan Windows PC","Pasang Steam di konsol"],a:2},
-      {q:"Apa perlu untuk main permainan Denuvo (Ubisoft, Rockstar, COD)?",o:["Pasang dan main terus","Tunggu parcel / pinjam akaun dari seller","Pasang VPN","Beli game di Steam"],a:1}
+      {q:"Dari mana anda dapat CD Key?",o:["Steam Store","Laman web ONENNABE","Seller anda (TikTok, Shopee, dll.)","Microsoft Store"],a:2},
+      // Denuvo quiz BM
+      {q:"Apa yang WAJIB buat SEBELUM tukar ke akaun seller untuk permainan Denuvo?",o:["Nyahpasang Steam Fix","Tutup Steam Unlock ONENNABE","Padam CD Key","Restart PC"],a:1},
+      {q:"Selepas main permainan Denuvo sampai main menu guna akaun seller, apa buat seterusnya?",o:["Terus main dari akaun seller","Tukar balik ke akaun Steam sendiri dan main","Nyahpasang permainan","Hubungi Steam support"],a:1},
+      {q:"Permainan mana yang PENGECUALIAN — mesti dimain dari akaun seller dalam mod offline?",o:["GTA V","Assassin's Creed","Resident Evil Requiem","Call of Duty"],a:2},
+      // Bypass quiz BM
+      {q:"Apa tag yang permainan mesti ada sebelum boleh apply bypass?",o:["Free to Play","Bypass Available atau Online Supported","Early Access","Coming Soon"],a:1},
+      {q:"Apa yang PENTING dilakukan sebelum apply Online Patch / Bypass?",o:["Kemas kini Windows","Matikan antivirus","Nyahpasang Steam","Tukar nama Steam"],a:1}
     ]
   }
 };
@@ -564,9 +686,7 @@ const L=()=>C.ui[lang],P=()=>C.pages[lang],Q=()=>C.questions[lang];
 const $=id=>document.getElementById(id);
 
 function setLang(l){
-  lang=l;
-  $('lEN').classList.toggle('on',l==='en');
-  $('lBM').classList.toggle('on',l==='bm');
+  lang=l;$('lEN').classList.toggle('on',l==='en');$('lBM').classList.toggle('on',l==='bm');
   $('hSub').textContent=L().sub;
   if(done)refreshRes();else if(qOn)refreshQUI();else{buildProg();renderPg();}
 }
@@ -577,8 +697,7 @@ function refreshQUI(){
   const b=$('bNextQ');if(!b.classList.contains('hidden'))b.textContent=qi===TQ-1?L().viewR:L().nextQ;
 }
 function refreshRes(){
-  const p=sc>=C.pass;
-  $('rMsg').textContent=p?L().granted:L().denied;
+  const p=sc>=C.pass;$('rMsg').textContent=p?L().granted:L().denied;
   $('rDesc').textContent=p?L().passD(sc,TQ):L().failD(sc,TQ,C.pass);
   if(p){$('dlLabel').textContent=L().dlOpen;$('dlBtn').textContent=L().dlBtn;}
   else{$('failLabel').textContent=L().dlLock;$('failDesc').innerHTML=L().failMore(C.pass);$('retryBtn').textContent=L().retry;}
@@ -626,8 +745,7 @@ function renderQ(){
 function pick(i){
   if(ans)return;ans=true;
   const cor=Q()[qi].a,fb=$('qFb');
-  Q()[qi].o.forEach((_,j)=>$('o'+j).disabled=true);
-  $('o'+cor).classList.add('ok');
+  Q()[qi].o.forEach((_,j)=>$('o'+j).disabled=true);$('o'+cor).classList.add('ok');
   if(i===cor){sc++;fb.className='fb ok';fb.textContent=L().ok;}
   else{$('o'+i).classList.add('no');fb.className='fb no';fb.textContent=L().no(Q()[qi].o[cor]);}
   $('qScore').textContent=L().sc(sc);
@@ -638,7 +756,7 @@ function pick(i){
 function nextQ(){qi++;if(qi<TQ)renderQ();}
 function showRes(){
   done=true;$('qSec').style.display='none';$('rSec').style.display='block';$('progWrap').classList.add('hidden');
-  const p=sc>=C.pass;$('rScore').textContent=sc;
+  const p=sc>=C.pass;$('rScore').textContent=sc;$('rTotal').textContent='/'+TQ;
   const ring=$('rFill'),circ=2*Math.PI*70,off=circ-(sc/TQ)*circ;
   ring.classList.toggle('fail',!p);setTimeout(()=>ring.style.strokeDashoffset=off,100);
   if(p){$('rMsg').textContent=L().granted;$('rMsg').style.color='var(--accent-green)';$('rDesc').textContent=L().passD(sc,TQ);$('dlBox').classList.remove('hidden');$('failBox').classList.add('hidden');$('dlLabel').textContent=L().dlOpen;$('dlBtn').href=C.dlURL;$('dlBtn').textContent=L().dlBtn;}
